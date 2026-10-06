@@ -108,7 +108,6 @@ function ContactForm() {
           <textarea value={form.message} onChange={set("message")} rows={5} placeholder="Tell us about your sites, workers, and what hurts most today…" className="resize-y rounded-md border border-border bg-background px-3 py-2.5 text-text placeholder:text-text-muted focus:border-primary focus:outline-none" />
         </label>
         {error && <p role="alert" className="text-sm text-red-600">{error}</p>}
-        {/* Honeypot: invisible to humans, catches bots. */}
         <input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" className="hidden" />
         <button type="submit" disabled={sending} className="btn-nudge press inline-flex items-center justify-center gap-1.5 rounded-md bg-primary px-5 py-3 text-[15px] font-medium text-white transition-colors hover:bg-primary-hover disabled:opacity-60">
           {sending ? "Sending…" : "Send message"} <Send className="h-4 w-4" aria-hidden="true" />

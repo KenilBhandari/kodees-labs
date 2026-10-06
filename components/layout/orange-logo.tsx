@@ -7,10 +7,10 @@ import styles from './orange-logo.module.css'
 
 /* eslint-disable @next/next/no-img-element -- static SVGs, next/image adds nothing */
 
-// Intro: pause so the collapsed mark registers, then timings mirror the CSS
-const INTRO_DELAY = 500 // ms before auto-expanding
-const EXPAND_MS = 300 // must match the .slider transition duration
-const HOLD_MS = 1000 // ms the full lockup stays open
+// Intro timings mirror the CSS: EXPAND_MS must match the .slider transition.
+const INTRO_DELAY = 500
+const EXPAND_MS = 300
+const HOLD_MS = 1000
 
 export default function OrangeLogo() {
   const [open, setOpen] = useState(false)
@@ -23,14 +23,10 @@ export default function OrangeLogo() {
     timers.current = []
   }
 
-  // topbar lives in the layout and survives navigation → collapse after we arrive
   useEffect(() => {
     setOpen(false)
   }, [pathname])
 
-  // Auto-play intro on a full load of /: collapsed →
-  // expand → hold → collapse. In-app navigation never remounts the layout,
-  // so this naturally fires only on page loads.
   useEffect(() => {
     if (pathname !== '/') return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return

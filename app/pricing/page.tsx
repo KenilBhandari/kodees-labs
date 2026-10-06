@@ -9,7 +9,6 @@ import { PageHero, SectionHead, FinalCta } from "@/components/sections";
 import { Reveal } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 
-// Note: metadata can't export from client component; layout template handles title.
 const PLANS = [
   {
     name: "Starter",
@@ -165,7 +164,7 @@ export default function PricingPage() {
               <tbody>
                 {ROWS.map((r) => (
                   <tr key={r[0]} className="border-b border-border last:border-0">
-                    {[r[0], r[1], r[2], r[3]].map((c, j) => (
+                    {r.map((c, j) => (
                       <td key={j} className={cn("px-4 py-3", j === 0 ? "font-medium text-text" : "text-text-muted tnum")}>
                         {c}
                       </td>

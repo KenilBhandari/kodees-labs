@@ -62,7 +62,6 @@ const FAQS = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
       <section className="hero-flat border-b border-border">
         <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-20">
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -109,7 +108,6 @@ export default function HomePage() {
             </Reveal>
           </div>
         </div>
-        {/* marquee */}
         <div className="marquee overflow-hidden border-t border-border bg-surface py-3">
           <div className="marquee-track flex w-max gap-8 whitespace-nowrap px-4 text-[13px] font-medium text-text-muted">
             {[0, 1].map((k) => (
@@ -127,7 +125,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PRODUCT STORY */}
       <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
         <Reveal className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">
@@ -161,7 +158,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROOF */}
       <section className="border-y border-border bg-surface">
         <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <Reveal className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -229,7 +225,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
         <div className="grid gap-8 lg:grid-cols-5">
           <Reveal className="lg:col-span-2">

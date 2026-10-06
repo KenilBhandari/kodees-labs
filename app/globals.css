@@ -40,7 +40,6 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-/* Scroll-triggered reveal (paired with components/reveal.tsx) */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -53,7 +52,6 @@ body {
   transform: none;
 }
 
-/* Flat hero band, no gradients. Depth comes from type plus borders. */
 .hero-flat {
   background: var(--background);
 }
@@ -81,7 +79,6 @@ body {
   background: rgba(234, 88, 12, 0.18);
 }
 
-/* ---- Nav link underline sweep ---- */
 .nav-link {
   position: relative;
 }
@@ -101,12 +98,10 @@ body {
 .nav-link:hover::after {
   transform: scaleX(1);
 }
-/* Active page keeps its pill background, so it skips the underline. */
 .nav-link[aria-current="page"]::after {
   transform: scaleX(0);
 }
 
-/* ---- CTA arrow nudge + press feedback ---- */
 .btn-nudge svg {
   transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -120,12 +115,10 @@ body {
   transform: scale(0.97);
 }
 
-/* ---- Marquee rests on hover ---- */
 .marquee:hover .marquee-track {
   animation-play-state: paused;
 }
 
-/* ---- Respect reduced motion everywhere ---- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

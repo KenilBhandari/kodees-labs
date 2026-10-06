@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-const tones: Record<string, string> = {
+const tones = {
   neutral: "bg-background text-text-muted border-border",
   primary: "bg-primary text-white border-transparent",
   success: "bg-emerald-50 text-emerald-700 border-transparent",

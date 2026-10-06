@@ -2,11 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress-bar";
 
-/**
- * Faithful, static preview built from the real design-system primitives
- * (Card / Badge / ProgressBar). Sample workspace values.
- */
-
 const STATS = [
   { label: "Active Projects", value: "4", hint: "7 active sites" },
   { label: "Today's Labour", value: "42 / 51", hint: "present / active" },
@@ -49,7 +44,6 @@ export function ProductPreview() {
       </div>
 
       <div className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-5">
-        {/* Project overview. Mirrors the dashboard Project Overview card. */}
         <Card className="p-4 sm:p-5 lg:col-span-3">
           <div className="flex items-center justify-between gap-2">
             <h3 className="min-w-0 truncate text-[15px] font-semibold text-text">Project Overview</h3>
@@ -80,7 +74,6 @@ export function ProductPreview() {
         </Card>
 
         <div className="flex flex-col gap-3 lg:col-span-2">
-          {/* Fast attendance. Mirrors the dashboard attendance muster. */}
           <Card className="p-4 sm:p-5">
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0">
@@ -117,7 +110,6 @@ export function ProductPreview() {
             </div>
           </Card>
 
-          {/* Low stock. Mirrors the dashboard Low Stock card. */}
           <Card className="p-4 sm:p-5">
             <div className="flex items-center justify-between gap-2">
               <h3 className="text-[15px] font-semibold text-text">Low Stock</h3>

@@ -18,8 +18,9 @@ const LINKS = [
 export function LandingNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
-  // Close the menu on route change + Escape.
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
@@ -43,8 +44,7 @@ export function LandingNav() {
 
         <nav aria-label="Landing" className="hidden items-center gap-1 md:flex">
           {LINKS.map((l) => {
-            const active =
-              l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+            const active = isActive(l.href);
             return (
               <Link
                 key={l.href}
@@ -96,7 +96,6 @@ export function LandingNav() {
         </button>
       </div>
 
-      {/* Animated dropdown: height + fade + staggered links */}
       <div
         className={cn(
           "grid transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden",
@@ -112,8 +111,7 @@ export function LandingNav() {
           >
             <nav aria-label="Mobile" className="flex flex-col" inert={!open}>
               {LINKS.map((l, i) => {
-                const active =
-                  l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+                const active = isActive(l.href);
                 return (
                   <Link
                     key={l.href}
